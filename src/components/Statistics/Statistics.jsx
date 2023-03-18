@@ -7,7 +7,9 @@ export const Statistics = ({ data }) => {
     <Section>
       <Title>Upload stats</Title>
       <List>
-        <Item data={data} />
+        {data.map(({ id, label, percentage }) => (
+          <Item key={id} label={label} percentage={percentage} />
+        ))}
       </List>
     </Section>
   );

@@ -1,16 +1,16 @@
 import { TransactionItem } from './Item.styled';
 import PropTypes from 'prop-types';
 
-export const Item = ({ transactions }) => {
-  return transactions.map(({ id, type, amount, currency }) => (
-    <TransactionItem key={id}>
+export const Item = ({ type, amount, currency }) => {
+  return (
+    <TransactionItem>
       <tr>
         <td>{type}</td>
         <td>{amount}</td>
         <td>{currency}</td>
       </tr>
     </TransactionItem>
-  ));
+  );
 };
 
 Item.propTypes = {

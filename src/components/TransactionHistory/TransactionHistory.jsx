@@ -12,7 +12,9 @@ export const TransactionHistory = ({ transactions }) => {
           <th>Currency</th>
         </tr>
       </Thead>
-      <Item transactions={transactions} />
+      {transactions.map(({ id, type, amount, currency }) => (
+        <Item key={id} type={type} amount={amount} currency={currency} />
+      ))}
     </Table>
   );
 };
