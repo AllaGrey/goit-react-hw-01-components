@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const Item = ({ label, percentage }) => {
   return (
-    <ItemStyle>
+    <ItemStyle label={label}>
       <Label>{label}</Label>
       <Percentage>{percentage}%</Percentage>
     </ItemStyle>

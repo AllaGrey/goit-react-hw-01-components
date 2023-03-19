@@ -4,9 +4,9 @@ export const ItemStyle = styled.li`
   display: block;
   width: 100px;
   text-align: center;
-  background-color: ${item => {
+  background-color: ${({ label }) => {
     // eslint-disable-next-line default-case
-    switch (item.children[0].props.children) {
+    switch (label) {
       case '.docx':
         return 'blue';
       case '.pdf':
